@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Website Project 3010</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+
+
+</head>
+
+<body>
+
+<div class="container-fixed">
+
+    <div class="header">
+
+        <img   class="img-responsive" id="climate" src="melt6.jpg" alt="Melting ice caps.">
+
+        <img   class="img-responsive" id="climate1" src="earth2.jpg" alt="A picture of planet earth.">
+
+        <img   class="img-responsive" id="climate2" src="melt7.jpg" alt="More melting polar ice.">
+
+    </div>
+
+</div>
+
+<div class="container-fluid">
+
+    <div class="row content">
+
+        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 sidenav">
+
+            <ul class="sideul">
+
+                <a href="http://localhost/project1/home.html">Home</a>
+                <a href="http://localhost/project1/registration.html">Registration</a>
+                <a href="http://localhost/project1/animations.html">Animations</a>
+                <a href="https://climate.nasa.gov/evidence/" target="_blank">Evidence</a>
+
+            </ul>
+
+        </div>
+
+
+        <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 registration">
+
+           <form method="get">
+
+               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 regstuff">
+
+                    <label>
+                    Username:<br/>
+                    <input id="first" class="input" type="text" name="username" minlength="6" maxlength="50" oninput="checkinput()" required>
+                        <p id="usermess" class="alert" hidden>Need more than 6 characters.</p>
+                    </label><br/>
+
+                    <label>
+                    Password:<br/>
+                    <input id="pass" class="input" type="password" name="password" minlength="8" maxlength="50" oninput="checkinput2()" required>
+                        <p id="passmess" class="alert" hidden>Needs upper case. Lowercase. Number. Special Character.</p>
+                    </label><br/>
+
+                    <label>
+                    Repeat Password:<br/>
+                    <input id="rpass" class="input" type="password" name="rpassword" minlength="8" maxlength="50"  oninput="checkinput3()" required>
+                        <p class= "alert" id="conpass" hidden>Passwords don't match.</p>
+                    </label><br/>
+
+                   <label id="firstname">
+                       First name:<br/>
+                       <input id="beg" type="text" name="firstname"  maxlength="50" class="input" oninput="checkinput4()" required>
+                   </label><br/>
+
+                   <label id="lastname">
+                       Last name:<br/>
+                       <input  id="las" class="input" type="text" name="lastname"  maxlength="50" oninput="checkinput5()" required>
+                   </label><br/>
+
+                    <label>
+                    Address 1:<br/>
+                    <input id="add" class="input" type="text" name="address1" maxlength="100" oninput="checkinput6()" required>
+                    </label><br/>
+
+                    <label>
+                    Address 2: Optional<br/>
+                    <input class="input" type="text" name="address2" maxlength="100">
+                    </label><br/>
+
+                    <label>
+                    City:<br/>
+                    <input  id="city" class="input" type="text" name="city" maxlength="50"  oninput="checkinput7()" required>
+                    </label><br/>
+
+
+               </div>
+
+               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 regstuff">
+
+                   <label>
+                       State:<br/>
+                       <input id="state" class="input" list="States" maxlength="52" oninput="checkinputstate()"required>
+                       <datalist id="States">
+                           <option value="Missouri">
+                           <option value="California">
+                           <option value="Texas">
+                           <option value="New York">
+                           <option value="Other">
+                       </datalist>
+                   </label><br/>
+
+                    <label>
+                    Zipcode:<br/>
+                    <input id="zip" class="input" type="text" name="zip" minlength="5" maxlength="5" onkeyup="replacezip()" oninput="checkinputzip()" required>
+                    </label><br/>
+
+                    <label>
+                    Phone Number:<br/>
+                    <input id="phonenum" class="input" type="text" name="phone" maxlength="12" onkeyup="replacephone()" oninput="checkinputphone()" required>
+                    </label><br/>
+
+                    <label>
+                    Email:<br/>
+                    <input id="email" class="input" type="text" name="email" oninput="checkinputemail()" required>
+                    </label><br/>
+
+                    <label>
+                    Gender:<br/>
+                    <input id="male" type="radio" name="gender" value="male" oninput="deselectGen()" required> Male<br/>
+                    <input id="fema" type="radio" name="gender" value="female" oninput="deselectGen()"> Female<br/>
+                    <input id="genother" class="input" type="text" name="gender"  oninput="deselectGen()" maxlength="50" required>  <br/>
+                    </label><br/>
+
+                    <label>
+                    Marital Status:<br/>
+                    <input id="sing" type="radio" name="marital" value="single" oninput="deselectMar()" required> Single<br/>
+                    <input id="marr" type="radio" name="marital" value="married" oninput="deselectMar()"> Married<br/>
+                    <input id="marother" class="input" type="text" name="marital" oninput="deselectMar()" maxlength="50" required> <br/>
+                    </label><br/>
+
+                    <label>
+                    Date of Birth:<br/>
+                    <input id="dob" class="input" type="date" name="dob" oninput="checkinputdob()" required>
+                    </label><br/>
+
+               </div>
+
+               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 regstuff">
+
+                <label>
+                <button type="submit" class="submit-button" value="Submit" disabled>Submit</button>
+                <button type="reset" value="Reset">Reset</button>
+                </label>
+
+               </div>
+
+           </form>
+
+            <script src="scripts.js"></script>
+
+        </div>
+
+    </div>
+
+    </div>
+
+    <div class="container-fixed">
+        <footer class="footer">
+
+            <a href="https://climate.nasa.gov/evidence/" target="_blank">Evidence From Nasa</a>
+            <a href="https://www.ucsusa.org/global-warming" target="_blank">Union of Concerned Scientists</a>
+            <a href="https://www.google.com/" target="_blank">Google</a>
+
+        </footer>
+    </div>
+
+</body>
+
+</html>
+

@@ -1,0 +1,424 @@
+html, body {
+    margin:0;
+    padding:0;
+    height:auto;
+    width:auto;
+    background-color: black;
+
+}
+
+input
+{
+    color: black;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+.row.content {height: 1500px}
+
+
+/* This is the sizing and position for all of the images on the pages. */
+#climate{
+
+    height: 100%;
+    width: 33%;
+    float: left;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    animation: ghost 3s;
+
+}
+
+#climate1{
+
+
+    height: 100%;
+    width: 33%;
+    float: right;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    animation: ghost 3s;
+
+}
+#climate2{
+
+     padding-top: 5px;
+     padding-bottom: 3px;
+    height: 100%;
+    width: 33%;
+    margin: auto;
+    animation: ghost 3s;
+}
+
+#nasagraph{
+    width: 100%;
+    height:40vw;
+    animation: ghost 1s;
+}
+
+.header {
+    height: 150px;
+    text-align: center;
+    background: black;
+    color: white;
+    margin-bottom: 0;
+    border-radius: 0;
+
+
+}
+
+.header a
+{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+}
+
+/* The style of the sidenav menu. */
+.sidenav {
+
+    height: 100%;
+    z-index: 1;
+    float: left;
+    background-color: black;
+    padding-top: 20px;
+    clear: right;
+}
+
+/* The navigation menu links */
+.sidenav a {
+
+    padding: 6px 8px 20px 16px;
+    text-decoration: none;
+    font-size: 150%;
+    color: #818181;
+    display: block;
+    animation: ghost 1s;
+
+}
+
+/*To highlight links in the sidenav when we hover over them.*/
+.sidenav a:hover {
+    color: cyan;
+    animation: ghostpulse infinite 1s;
+}
+
+/* Style of main div on page. */
+.main {
+
+    background-color: black;
+
+    color: white;
+    min-height: 600px;
+    overflow: auto;
+    float: right;
+    padding-left:65px;
+}
+
+/* Style of registration div. */
+.registration {
+    min-height: 400px;
+    background-color: black;
+    color: gray;
+    overflow:auto;
+    float right;
+}
+
+/* Used to address spacing issues on the form page between inputs. */
+input,label{
+  margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.footer
+{
+
+    width:100%;
+    height: 75px;
+
+    background:-moz-mac-accentdarkestshadow;
+    text-align: center;
+    clear: both;
+    border-style: solid;
+    border-width: 3px;
+    border-color: gray;
+    padding-top: 10px;
+
+}
+
+.footer a
+{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 120%;
+    color: white;
+    display: inline-block;
+}
+
+/* Allowing the link to light up when we put our curser over it. */
+.footer a:hover
+{
+    color: cyan;
+    animation: ghostpulse infinite 1s;
+}
+
+
+/* The sizes and position of each layer of the spinning lemon */
+.animation {
+    width: 200px;
+    height: 200px;
+    background-color: coral;
+    animation: spinninglemon 2s .5s infinite alternate;
+    position: absolute;
+    top: 30%;
+    right: 50%
+}
+
+.animation2 {
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    animation: spinninglemon2 2s .5s infinite alternate;
+    position: absolute;
+    top: 25%;
+    left: 25%;%
+}
+
+.animation3 {
+    width: 50px;
+    height: 50px;
+    background-color: coral;
+    animation: spinninglemon3 2s .5s infinite alternate;
+    position: absolute;
+    top: 25%;
+    left: 25%;%
+}
+
+.input
+{
+    border-style: solid;
+    border-width: 2px;
+    border-color: cyan;
+}
+
+/* This is used to allow pictures and sidenav text to fade in as the page is loaded. */
+@keyframes ghost{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+
+}
+
+/* This is used to allow pictures and sidenav text to fade in as the page is loaded. */
+@keyframes ghostpulse{
+    0%{
+        opacity: 0.25;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.25;
+    }
+
+}
+
+
+/* The three different keyframes used for the outer,middle,and inside part of the spinning lemon animation. */
+@keyframes spinninglemon {
+    0%  {
+        border-radius:0 50% 0 50%;
+        background:indianred;
+        transform:rotate(0deg);
+    }
+    25%  {
+        border-radius:0 50% 0 50%;
+        background:skyblue;
+        transform:rotate(90deg);
+
+    }
+    50%  {
+        border-radius:50% 0 50% 0;
+        background:darkslategray;
+        transform:rotate(180deg);
+
+    }
+    75%  {
+        border-radius:0 50% 0 50%;
+        background:darkgrey;
+        transform:rotate(270deg);
+
+    }
+    100% {
+
+        border-radius:50% 0 50% 0;
+        background:goldenrod;
+        transform:rotate(360deg);
+
+    }
+}
+
+
+@keyframes spinninglemon2 {
+    0%  {
+        border-radius:50% 0 50% 0;
+        background:red;
+        transform:rotate(0deg);
+    }
+    25%  {
+        border-radius:50% 0 50% 0;
+        background:blue;
+        transform:rotate(180deg);
+    }
+    50%  {
+        border-radius:0 50% 0 50%;
+        background:green;
+        transform:rotate(360deg);
+
+    }
+    75%  {
+        border-radius:50% 0 50% 0;
+        background:slategray;
+        transform:rotate(540deg);
+
+    }
+    100% {
+        border-radius:0 50% 0 50%;
+        background:yellowgreen;
+        transform:rotate(720deg);
+
+    }
+}
+
+@keyframes spinninglemon3 {
+    0%  {
+        border-radius:0 50% 0 50%;
+        background:darkred;
+        transform:rotate(0deg);
+    }
+    25%  {
+        border-radius:0 50% 0 50%;
+        background:lightsteelblue;
+        transform:rotate(90deg);
+
+    }
+    50%  {
+        border-radius:50% 0 50% 0;
+        background:palegreen;
+        transform:rotate(180deg);
+
+    }
+    75%  {
+        border-radius:0 50% 0 50%;
+        background:black;
+        transform:rotate(270deg);
+
+    }
+    100% {
+
+        border-radius:50% 0 50% 0;
+        background:palegoldenrod;
+        transform:rotate(360deg);
+
+    }
+}
+
+.alert{
+    color: red;
+}
+
+
+/* To fix the fontsize of the sidebar text on ipad screens */
+@media screen and (max-width: 769px) {
+{height:auto;}
+
+    .sidenav a{
+     font-size: 15px;
+    }
+}
+
+/* To force different sizes on elements with smaller screens that could not be addressed with boot strap. */
+@media screen and (max-width: 767px) {
+    {height:auto;}
+
+    .sidenav {
+        height: 100px;
+    }
+
+    .sidenav a {
+        margin: auto;
+        text-align: center;
+        font-size: 10px;
+        padding: 4px;
+    }
+
+    .sideul{
+        padding-right: 40px;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .main {
+        min-height: 150px;
+        padding-left:10px;
+    }
+
+    .header{
+        height: 80px;
+    }
+
+    .footer{
+        height: 80px;
+        display: block;
+        font-size: 10px;
+    }
+
+    .footer a{
+        display:block;
+        padding: 2px;
+    }
+
+    form{
+        text-align: center;
+        font-size: 10px;
+    }
+
+    input,label{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .animation{
+        height: 100px;
+        width:100px;
+        top: 20%;
+        left: 37%;
+    }
+
+    .animation2{
+        height: 50px;
+        width: 50px;
+    }
+
+    .animation3{
+        height: 25px;
+        width: 25px;
+    }
+
+    #firstlabel{
+
+        padding-top: 30px;
+    }
+
+    .alert{
+        font-size: 10px;
+    }
+}
+
+.row.content {height: auto;}
